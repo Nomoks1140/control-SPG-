@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Validación de Formulario con Javascript</title>
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body background="Fondo.jpg">
+	<main>
+		<h1><img src="LOGO.png" alt="" height="200px" width="auto"><br>Control De <br> Seguridad Privada</h1>
+		
+		<form class="formulario" id="formulario" action="validar_formacion.php" method="POST">
+            <div class="titulo">
+			<h1 id="T">Formacion Academica</h1>
+		    </div>
+<br>		
+ 
+			<!-- Grupo: Nombre -->
+			<div class="formulario__grupo" id="grupo__nombre">
+				<label for="nombre" class="formulario__label">Nombre de la Institucion</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" required pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,64}" title="El nombre de la institucion tiene que ser de 4 a 16 dígitos y solo puede contener letras." name="nombre_institucion" id="nombre" placeholder="Daniel">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+			</div>
+
+		
+         <!-- Grupo: Tipo de documento -->
+		 <div class="formulario__grupo" id="tipo_doc">
+			<label for="id_tipo_doc" class="formulario__label">Nivel Educativo</label>
+			<div class="formulario__grupo-input">
+				<select class="formulario__input" required name="id_nivel_educativo" id="id_nivel_educativo">
+					<option value="">Selecione una opcion</option>
+					<option value="1">Educacion Basica</option>
+					<option value="2">Educacion Media</option>
+				</select>
+			</div>
+
+		</div>
+
+        <div class="formulario__grupo" id="tipo_doc">
+			<label for="id_tipo_doc" class="formulario__label">Ultimo Grado Cursado</label>
+			<div class="formulario__grupo-input">
+				<select class="formulario__input" required name="id_grado_escolaridad" id="id_grado_escolaridad">
+					<option value="">Selecione una opcion</option>
+					<option value="1">9°</option>
+					<option value="2">10°</option>
+                    <option value="3">11°</option>
+				</select>
+			</div>
+
+		</div>
+			
+
+
+			<!-- Grupo: direccion -->
+			<div class="formulario__grupo" id="grupo__direccion">
+				<label for="direccion" class="formulario__label">Diploma</label>
+				<div class="formulario__grupo-input">
+					<input type="file" class="formulario__input" required name="diploma" id="diploma">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+			</div>
+<br>		
+			
+			<button type="submit" class="formulario__btn" >Enviar</button>
+				
+		</form>
+	</main>
+
+	
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+</body>
+</html>
